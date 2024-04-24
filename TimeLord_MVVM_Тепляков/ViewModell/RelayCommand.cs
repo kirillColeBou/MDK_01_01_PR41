@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace TimeLord_MVVM_Тепляков.ViewModell
 {
-    internal class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         private Action<object> execute;
         private Func<object, bool> canExecute;

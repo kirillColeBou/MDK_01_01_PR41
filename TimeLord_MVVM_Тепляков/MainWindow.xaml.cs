@@ -23,6 +23,8 @@ namespace TimeLord_MVVM_Тепляков
         public MainWindow()
         {
             InitializeComponent();
+            InitializeComponent();
+            frame.Navigate(new View.Main());
         }
     }
 }

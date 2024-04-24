@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,18 +10,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TimeLord_MVVM_Тепляков.ViewModell;
 
-namespace TimeLord_MVVM_Тепляков
+namespace TimeLord_MVVM_Тепляков.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Stopwatch.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Stopwatch : Page
     {
-        public MainWindow()
+        public Stopwatch()
         {
             InitializeComponent();
-            frame.Navigate(new View.Stopwatch());
+            DataContext = new VMStopwatch();
         }
     }
 }

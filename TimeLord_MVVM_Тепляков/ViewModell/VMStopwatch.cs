@@ -7,7 +7,7 @@ namespace TimeLord_MVVM_Тепляков.ViewModell
 {
     public class VMStopwatch : INotifyPropertyChanged
     {
-        public Stopwatch Stopwatch { get; set; }
+        public Stopwatch StopWatch { get; set; }
 
         private DispatcherTimer Timer = new DispatcherTimer()
         {
@@ -16,21 +16,24 @@ namespace TimeLord_MVVM_Тепляков.ViewModell
 
         public VMStopwatch()
         {
-            Stopwatch = new Stopwatch() { Work = false, Time = 0 };
+            StopWatch = new Stopwatch() { Work = false, Time = 0 };
             Timer.Tick += Timer_Tick;
             Timer.Start();
         }
 
         private void Timer_Tick(object sender, System.EventArgs e)
         {
-            if (Stopwatch.Work) Stopwatch.Time++;
+            if (StopWatch.Work) StopWatch.Time++;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
-            if(PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            }
         }
     }
 }

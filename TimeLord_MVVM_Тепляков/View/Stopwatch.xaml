@@ -11,7 +11,7 @@
     <Grid Background="#FFE8E100" DataContext="{Binding StopWatch}">
         <Label Foreground="White" FontSize="48" Content="{Binding Timer, UpdateSourceTrigger=PropertyChanged}"
            Margin="115,10,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <ListBox Grid.Column="0" ItemsSource="{Binding Interval}" Margin="10,70,0,10" HorizontalAlignment="Left" Width="100">
+        <ListBox Grid.Column="0" ItemsSource="{Binding Interval}" Margin="10,100,0,10" HorizontalAlignment="Left" Width="100">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
@@ -21,10 +21,11 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
+        <Button Click="TimerClick" Content="Таймер" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Background="White" Margin="10,10,0,0"/>
         <Button Content="{Binding TextButton, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"
-            VerticalAlignment="Top" Width="100" Height="25" Background="White" Margin="10,10,0,0"
+            VerticalAlignment="Top" Width="100" Height="25" Background="White" Margin="10,40,0,0"
             Command="{Binding StartTimer}"/>
         <Button Content="Интервал" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100"
-            Height="25" Background="White" Margin="10,40,0,0" Command="{Binding IntervalTimer}"/>
+            Height="25" Background="White" Margin="10,70,0,0" Command="{Binding IntervalTimer}"/>
     </Grid>
 </Page>

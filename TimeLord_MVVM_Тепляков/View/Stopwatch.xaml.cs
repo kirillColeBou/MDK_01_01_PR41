@@ -24,5 +24,7 @@ namespace TimeLord_MVVM_Тепляков.View
             InitializeComponent();
             DataContext = new VMStopwatch();
         }
+
+        private void TimerClick(object sender, RoutedEventArgs e) => MainWindow.init.frame.Navigate(new View.Timer());
     }
 }
